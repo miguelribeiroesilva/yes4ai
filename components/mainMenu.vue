@@ -112,8 +112,25 @@ const menuItems = computed(() => [
         ]
       },
       {
+        key: 'LangChainTools',
+        label: 'LangChain Tools',
+        children: [
+          {
+            key: 'gmail',
+            label: 'Gmail Tool',
+            to: '/langchain/gmail'
+          },
+          {
+            key: 'calendar',
+            label: 'Calendar Tool',
+            to: '/langchain/calendar'
+          }
+        ]
+      },
+      {
         key: 'LangGraph',
         label: 'LangGraph',
+        to: '/langgraph',
         children: [
           {
             key: 'customer-support',
@@ -223,7 +240,6 @@ const handleNodeClick = (node) => {
 <style scoped>
 .layout-menu-container {
   height: 100%;
-  overflow-y: auto;
   padding: 1rem;
 }
 

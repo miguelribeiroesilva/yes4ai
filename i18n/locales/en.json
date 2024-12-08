@@ -76,7 +76,8 @@
         "plan-execute": "Plan & Execute",
         "reflection": "Reflection Agent",
         "rewoo": "ReWOO Agent",
-        "chat-simulation": "Chat Simulation"
+        "chat-simulation": "Chat Simulation",
+        "search": "Search the menu"
     },
     "chat": {
         "title": "Chat Simulation",
@@ -795,6 +796,91 @@
                 "datetime": "DateTime Parser",
                 "regex": "Regex Parser",
                 "custom": "Custom Parser"
+            }
+        },
+        "gmail": {
+            "title": "Gmail Tool",
+            "description": "Interact with Gmail using LangChain",
+            "authenticate": "Sign in with Google",
+            "compose": "Compose",
+            "refresh": "Refresh",
+            "search": "Search emails...",
+            "saveDraft": "Save as Draft",
+            "send": "Send",
+            "noMessages": "No messages found",
+            "actions": {
+                "openThread": "Open Thread",
+                "markRead": "Mark as Read",
+                "archive": "Archive",
+                "delete": "Delete"
+            },
+            "compose": {
+                "title": "Compose Email",
+                "to": "To",
+                "subject": "Subject",
+                "message": "Message"
+            },
+            "notifications": {
+                "authSuccess": "Successfully authenticated with Gmail",
+                "authError": "Failed to authenticate with Gmail",
+                "loggedOut": "Successfully logged out from Gmail",
+                "searchError": "Failed to search emails",
+                "draftSaved": "Draft saved successfully",
+                "draftError": "Failed to save draft",
+                "emailSent": "Email sent successfully",
+                "sendError": "Failed to send email",
+                "markedRead": "Message marked as read",
+                "markReadError": "Failed to mark message as read",
+                "archived": "Message archived",
+                "archiveError": "Failed to archive message",
+                "deleted": "Message moved to trash",
+                "deleteError": "Failed to delete message"
+            }
+        },
+        "calendar": {
+            "title": "Calendar Tool",
+            "description": "Interact with Google Calendar using LangChain",
+            "authenticate": "Sign in with Google",
+            "selectCalendar": "Select a calendar",
+            "newEvent": "New Event",
+            "checkAvailability": "Check Availability",
+            "refresh": "Refresh",
+            "noEvents": "No events found",
+            "event": {
+                "title": "New Event",
+                "summary": "Summary",
+                "description": "Description",
+                "location": "Location",
+                "dateTime": "Date & Time",
+                "start": "Start",
+                "end": "End",
+                "attendees": "Attendees",
+                "enterEmail": "Enter email and press enter"
+            },
+            "availability": {
+                "title": "Check Availability",
+                "timeRange": "Time Range",
+                "selectCalendars": "Select calendars"
+            },
+            "actions": {
+                "edit": "Edit",
+                "delete": "Delete",
+                "cancel": "Cancel",
+                "create": "Create",
+                "check": "Check"
+            },
+            "notifications": {
+                "authSuccess": "Successfully authenticated with Google Calendar",
+                "authError": "Failed to authenticate with Google Calendar",
+                "loggedOut": "Successfully logged out from Google Calendar",
+                "selectCalendar": "Please select a calendar first",
+                "refreshError": "Failed to refresh events",
+                "createSuccess": "Event created successfully",
+                "createError": "Failed to create event",
+                "deleteSuccess": "Event deleted successfully",
+                "deleteError": "Failed to delete event",
+                "selectCalendarsAvailability": "Please select at least one calendar",
+                "availabilityError": "Failed to check availability"
             }
         }
     }

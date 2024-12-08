@@ -1,0 +1,58 @@
+{
+    "hero": {
+        "title": "Mensajería empresarial simplificada",
+        "subtitle": "Conéctate con tus clientes a través de sus canales preferidos - todo en un solo lugar",
+        "startButton": "Empezar gratis",
+        "demoButton": "Ver cómo funciona",
+        "stats": {
+            "satisfaction": {
+                "value": "99%",
+                "label": "Satisfacción del Cliente"
+            },
+            "support": {
+                "value": "24/7",
+                "label": "Soporte"
+            },
+            "users": {
+                "value": "10K+",
+                "label": "Usuarios Activos"
+            }
+        }
+    },
+    "features": {
+        "title": "Todo lo que necesitas en un solo lugar",
+        "subtitle": "Funciones potentes para ayudarte a gestionar todas tus comunicaciones empresariales",
+        "unifiedInbox": {
+            "title": "Bandeja de entrada unificada",
+            "description": "Gestiona todas las conversaciones con tus clientes desde diferentes canales en una bandeja de entrada unificada."
+        },
+        "collaboration": {
+            "title": "Colaboración en equipo",
+            "description": "Trabaja junto con tu equipo para brindar la mejor experiencia de servicio al cliente."
+        },
+        "analytics": {
+            "title": "Analíticas",
+            "description": "Obtén información sobre el rendimiento de tu equipo y las métricas de satisfación del cliente."
+        }
+    },
+    "integrations": {
+        "title": "Conéctate con tus herramientas favoritas",
+        "subtitle": "Intégrate con las herramientas que ya usas y amas"
+    },
+    "cta": {
+        "title": "¿Listo para empezar?",
+        "subtitle": "Únete a miles de empresas que confían en Pidge para sus comunicaciones",
+        "button": "Comienza tu prueba gratuita"
+    },
+    "dashboard": {
+        "unifiedInbox": {
+            "title": "Bandeja de entrada unificada",
+            "description": "Todos los mensajes en un solo lugar"
+        },
+        "message": {
+            "author": "Juan Pérez",
+            "time": "hace 2m",
+            "content": "¡Hola! Me interesa tu producto. ¿Podrías darme más información sobre los precios?"
+        }
+    }
+}

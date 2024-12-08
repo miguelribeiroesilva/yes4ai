@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "Mensagens empresariais simplificadas",
+    "subtitle": "Ligue-se aos seus clientes através dos canais preferidos - tudo num só lugar",
+    "startButton": "Começar gratuitamente",
+    "demoButton": "Veja como funciona",
+    "stats": {
+      "satisfaction": {
+        "value": "99%",
+        "label": "Satisfação do Cliente"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Suporte"
+      },
+      "users": {
+        "value": "10K+",
+        "label": "Utilizadores Ativos"
+      }
+    }
+  },
+  "features": {
+    "title": "Tudo o que precisa num só lugar",
+    "subtitle": "Funcionalidades poderosas para ajudar a gerir todas as suas comunicações empresariais",
+    "unifiedInbox": {
+      "title": "Caixa de Entrada Unificada",
+      "description": "Faça a gestão de todas as conversas com os seus clientes de diferentes canais numa caixa de entrada unificada."
+    },
+    "collaboration": {
+      "title": "Colaboração em Equipa",
+      "description": "Trabalhe em conjunto com a sua equipa para fornecer a melhor experiência de atendimento ao cliente."
+    },
+    "analytics": {
+      "title": "Análises",
+      "description": "Obtenha informações sobre o desempenho da sua equipa e métricas de satisfação do cliente."
+    }
+  },
+  "integrations": {
+    "title": "Ligue-se às suas ferramentas favoritas",
+    "subtitle": "Integre com as ferramentas que já utiliza e aprecia"
+  },
+  "cta": {
+    "title": "Pronto para começar?",
+    "subtitle": "Junte-se a milhares de empresas que confiam no Pidge para as suas comunicações",
+    "button": "Inicie o seu período de teste gratuito"
+  },
+  "dashboard": {
+    "unifiedInbox": {
+      "title": "Caixa de Entrada Unificada",
+      "description": "Todas as mensagens num só lugar"
+    },
+    "message": {
+      "author": "João Silva",
+      "time": "há 2m",
+      "content": "Olá! Estou interessado no vosso produto. Pode dar-me mais informações sobre os preços?"
+    }
+  }
+}

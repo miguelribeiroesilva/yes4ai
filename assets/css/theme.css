@@ -1,0 +1,38 @@
+/* Light Theme Variables */
+:root {
+    --surface-ground: #f8f9fa;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #dee2e6;
+    --text-color: #495057;
+    --text-color-secondary: #6c757d;
+}
+
+/* Dark Theme Variables */
+:root[data-theme="dark"] {
+    --surface-ground: #121212;
+    --surface-section: #1e1e1e;
+    --surface-card: #1e1e1e;
+    --surface-overlay: #262626;
+    --surface-border: #404040;
+    --text-color: #f8f9fa;
+    --text-color-secondary: #dee2e6;
+}
+
+/* Common Styles */
+body {
+    background-color: var(--surface-ground);
+    color: var(--text-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.card {
+    background: var(--surface-card);
+    border: 1px solid var(--surface-border);
+}
+
+/* Transition for theme switch */
+* {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}

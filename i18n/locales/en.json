@@ -1,0 +1,58 @@
+{
+    "hero": {
+        "title": "Business messaging made simple",
+        "subtitle": "Connect with your customers through their preferred channels - all in one place",
+        "startButton": "Start for free",
+        "demoButton": "See how it works",
+        "stats": {
+            "satisfaction": {
+                "value": "99%",
+                "label": "Customer Satisfaction"
+            },
+            "support": {
+                "value": "24/7",
+                "label": "Support"
+            },
+            "users": {
+                "value": "10K+",
+                "label": "Active Users"
+            }
+        }
+    },
+    "features": {
+        "title": "Everything you need in one place",
+        "subtitle": "Powerful features to help you manage all your business communications",
+        "unifiedInbox": {
+            "title": "Unified Inbox",
+            "description": "Manage all your customer conversations from different channels in one unified inbox."
+        },
+        "collaboration": {
+            "title": "Team Collaboration",
+            "description": "Work together with your team to provide the best customer service experience."
+        },
+        "analytics": {
+            "title": "Analytics",
+            "description": "Get insights into your team's performance and customer satisfaction metrics."
+        }
+    },
+    "integrations": {
+        "title": "Connect with your favorite tools",
+        "subtitle": "Integrate with the tools you already use and love"
+    },
+    "cta": {
+        "title": "Ready to get started?",
+        "subtitle": "Join thousands of businesses that trust Pidge for their customer communications",
+        "button": "Start your free trial"
+    },
+    "dashboard": {
+        "unifiedInbox": {
+            "title": "Unified Inbox",
+            "description": "All messages in one place"
+        },
+        "message": {
+            "author": "John Doe",
+            "time": "2m ago",
+            "content": "Hey there! I'm interested in your product. Can you tell me more about the pricing?"
+        }
+    }
+}

@@ -1,13 +1,13 @@
 <template>
     <div class="language-switcher">
-        <Button 
-            v-for="locale in availableLocales" 
-            :key="locale.code"
-            :label="locale.name"
-            :severity="locale.code === $i18n.locale ? 'primary' : 'secondary'"
-            text
-            size="small"
-            @click="switchLanguage(locale.code)"
+        <Dropdown
+            v-model="selectedLocale"
+            :options="availableLocales"
+            optionLabel="name"
+            optionValue="code"
+            :placeholder="currentLocaleName"
+            class="w-full md:w-14rem"
+            @change="switchLanguage"
         />
     </div>
 </template>
@@ -15,15 +15,24 @@
 <script setup>
 import { useI18n } from '#i18n';
 import { useRouter } from 'vue-router';
+import { ref, computed } from 'vue';
 
 const { locales, locale } = useI18n();
 const router = useRouter();
+
+const selectedLocale = ref(locale.value);
 
 const availableLocales = computed(() => {
     return locales.value;
 });
 
-const switchLanguage = async (localeCode) => {
+const currentLocaleName = computed(() => {
+    const current = availableLocales.value.find(l => l.code === locale.value);
+    return current ? current.name : '';
+});
+
+const switchLanguage = async (event) => {
+    const localeCode = event.value;
     // Set the locale
     locale.value = localeCode;
     
@@ -45,7 +54,6 @@ const switchLanguage = async (localeCode) => {
 <style scoped>
 .language-switcher {
     display: flex;
-    gap: 0.5rem;
     align-items: center;
 }
 </style>

@@ -1,152 +1,217 @@
 <template>
-    <div class="card overflow-y-auto" v-if="modelValue">
-        <Tree :value="menu" 
+    <div class="layout-menu-container">
+        <div class="search-container mb-3">
+            <span class="p-input-icon-left w-full">
+                <i class="pi pi-search" />
+                <InputText v-model="searchQuery" class="w-full" :placeholder="t('menu.search')" />
+            </span>
+        </div>
+
+        <Tree :value="filteredMenuItems" 
               :filter="true"
               :filterMode="'strict'"
-              :filterPlaceholder="'Search menu...'"
-              filterBy="label"
-              class="w-full md:w-30rem"
-              :pt="{
-                  root: { class: 'p-2' },
-                  filterContainer: { class: 'p-2' }
-              }"
-              v-model:filterValue="filterValue">
-            <template #default="slotProps">
-                <NuxtLink 
-                    v-if="slotProps.node.to"
-                    :to="slotProps.node.to" 
-                    class="no-underline text-700 hover:text-primary"
-                    @click="handleClick">
-                    {{ slotProps.node.label }}
-                </NuxtLink>
-                <span v-else>
-                    {{ slotProps.node.label }}
-                </span>
+              class="layout-menu">
+            <template #default="{ node }">
+                <div class="menu-item">
+                    <router-link v-if="node.to" :to="node.to" class="menu-item-link">
+                        {{ node.label }}
+                    </router-link>
+                    <span v-else>{{ node.label }}</span>
+                </div>
             </template>
         </Tree>
-        
-        <div class="mt-auto">
-            <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
-            <a v-ripple class="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                <span class="font-medium">Amy Elsner</span>
-            </a>
-        </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
 
-const props = defineProps({
-    modelValue: {
-        type: Boolean,
-        default: false
-    }
-});
+const { t } = useI18n();
+const router = useRouter();
+const searchQuery = ref('');
 
-const emit = defineEmits(['update:modelValue']);
-const filterValue = ref('');
-
-const handleClick = () => {
-    emit('update:modelValue', false);
+const filterMenuItems = (items, query) => {
+    if (!query) return items;
+    
+    return items.filter(item => {
+        const matchesQuery = item.label.toLowerCase().includes(query.toLowerCase());
+        
+        if (item.children) {
+            item.children = filterMenuItems(item.children, query);
+            return item.children.length > 0 || matchesQuery;
+        }
+        
+        return matchesQuery;
+    });
 };
 
-const menu = ref([
+const menuItems = computed(() => [
     {
-        key: '0',
-        label: 'Dashboard',
-        icon: 'pi pi-home',
+        key: 'dashboard',
+        label: t('menu.dashboard'),
         to: '/'
     },
     {
-        key: '1',
-        label: 'Administration',
-        icon: 'pi pi-cog',
-        to: '/admin',
+        key: 'administration',
+        label: t('menu.administration'),
         children: [
             {
-                key: '1-0',
-                label: 'Users',
-                icon: 'pi pi-users',
+                key: 'users',
+                label: t('menu.users'),
                 to: '/admin/users'
             },
             {
-                key: '1-1',
-                label: 'Roles',
-                icon: 'pi pi-shield',
+                key: 'roles',
+                label: t('menu.roles'),
                 to: '/admin/roles'
-            }
-        ]
-    },
-    {
-        key: '2',
-        label: 'Reports',
-        icon: 'pi pi-chart-bar',
-        children: [
-            {
-                key: '2-0',
-                label: 'Sales',
-                icon: 'pi pi-dollar',
-                to: '/reports/sales'
             },
             {
-                key: '2-1',
-                label: 'Performance',
-                icon: 'pi pi-chart-line',
-                to: '/reports/performance'
+                key: 'permissions',
+                label: t('menu.permissions'),
+                to: '/admin/permissions'
             }
         ]
     },
     {
-        key: '3',
-        label: 'Settings',
-        icon: 'pi pi-cog',
+        key: 'ai-examples',
+        label: t('menu.aiExamples'),
+        children: [
+        {
+        key: 'LangGraph',
+        label: 'LangGraph',
+        children: [
+            {
+                key: 'customer-support',
+                label: t('menu.customerSupport'),
+                to: '/langgraph/customer-support'
+            },
+            {
+                key: 'agentic-rag',
+                label: t('menu.agenticRag'),
+                to: '/langgraph/agentic-rag'
+            },
+            {
+                key: 'self-rag',
+                label: t('menu.selfRag'),
+                to: '/langgraph/self-rag'
+            },
+            {
+                key: 'crag',
+                label: t('menu.crag'),
+                to: '/langgraph/crag'
+            },
+            {
+                key: 'collaboration',
+                label: t('menu.collaboration'),
+                to: '/langgraph/agent-collaboration'
+            },
+            {
+                key: 'supervisor',
+                label: t('menu.supervisor'),
+                to: '/langgraph/agent-supervisor'
+            },
+            {
+                key: 'hierarchical',
+                label: t('menu.hierarchical'),
+                to: '/langgraph/hierarchical-teams'
+            },
+            {
+                key: 'plan-execute',
+                label: t('menu.plan-execute'),
+                to: '/langgraph/plan-execute'
+            },
+            {
+                key: 'reflection',
+                label: t('menu.reflection'),
+                to: '/langgraph/reflection'
+            },
+            {
+                key: 'rewoo',
+                label: t('menu.rewoo'),
+                to: '/langgraph/rewoo'
+            },
+            {
+                key: 'chat-simulation',
+                label: t('menu.chat-simulation'),
+                to: '/langgraph/chat-simulation'
+            }
+        ]
+    },
+        ]
+    },
+
+    {
+        key: 'settings',
+        label: t('menu.settings'),
         to: '/settings'
     }
 ]);
+
+const filteredMenuItems = computed(() => {
+    return filterMenuItems(JSON.parse(JSON.stringify(menuItems.value)), searchQuery.value);
+});
+
+const handleNodeClick = (node) => {
+    if (node.to) {
+        router.push(node.to);
+    }
+};
 </script>
 
 <style scoped>
-.p-tree {
+.layout-menu-container {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.search-container {
+    padding: 0.5rem;
+}
+
+:deep(.layout-menu) {
+    border: none;
+    padding: 0;
+}
+
+.menu-item-link {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+    padding: 0.125rem;
+}
+
+.menu-item-link:hover {
+    color: var(--primary-color);
+}
+
+:deep(.p-tree) {
+    padding: 0;
     border: none;
     background: transparent;
 }
 
-.no-underline {
-    text-decoration: none;
+:deep(.p-tree-container) {
+    padding: 0;
 }
 
-:deep(.p-tree-container) {
-    padding: 0.5rem;
+:deep(.p-treenode) {
+    padding: 0;
 }
 
 :deep(.p-treenode-content) {
-    padding: 0.5rem !important;
+    padding: 0 !important;
+    min-height: 1.5rem;
+}
+:deep(.p-treenode .p-treenode-leaf) {
+    margin: 0 !important;
 }
 
 :deep(.p-tree-toggler) {
-    margin-right: 0.5rem;
-}
-
-:deep(.p-tree-filter-container) {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--surface-border);
-    position: sticky;
-    top: 0;
-    background: var(--surface-card);
-    z-index: 1;
-}
-
-.card {
-    margin-top: 4rem;
-    height: calc(100vh - 4rem);
-    display: flex;
-    flex-direction: column;
-}
-
-:deep(.p-tree) {
-    flex: 1;
-    overflow-y: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
 }
 </style>

@@ -54,5 +54,16 @@
             "time": "hace 2m",
             "content": "¡Hola! Me interesa tu producto. ¿Podrías darme más información sobre los precios?"
         }
+    },
+    "menu": {
+        "search": "Buscar menú...",
+        "dashboard": "Panel de Control",
+        "administration": "Administración",
+        "users": "Usuarios",
+        "roles": "Roles",
+        "reports": "Informes",
+        "sales": "Ventas",
+        "performance": "Rendimiento",
+        "settings": "Ajustes"
     }
 }

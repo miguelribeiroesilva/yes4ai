@@ -54,5 +54,655 @@
             "time": "2m ago",
             "content": "Hey there! I'm interested in your product. Can you tell me more about the pricing?"
         }
+    },
+    "menu": {
+        "dashboard": "Dashboard",
+        "administration": "Administration",
+        "users": "Users",
+        "roles": "Roles",
+        "permissions": "Permissions",
+        "reports": "Reports",
+        "analytics": "Analytics",
+        "performance": "Performance",
+        "settings": "Settings",
+        "aiExamples": "AI Examples",
+        "customerSupport": "Customer Support",
+        "agenticRag": "Agentic RAG",
+        "selfRag": "Self RAG",
+        "crag": "Contextual RAG",
+        "collaboration": "Agent Collaboration",
+        "supervisor": "Agent Supervisor",
+        "hierarchical": "Hierarchical Teams",
+        "plan-execute": "Plan & Execute",
+        "reflection": "Reflection Agent",
+        "rewoo": "ReWOO Agent",
+        "chat-simulation": "Chat Simulation"
+    },
+    "chat": {
+        "title": "Chat Simulation",
+        "start": "Start",
+        "stop": "Stop",
+        "you": "You",
+        "inputPlaceholder": "Type your message...",
+        "welcome": "Welcome to the {scenario} simulation!",
+        "config": {
+            "title": "Configuration",
+            "agents": "Active Agents",
+            "scenario": "Scenario",
+            "duration": "Duration"
+        }
+    },
+    "rewoo": {
+        "title": "ReWOO Simulation",
+        "actions": {
+            "reset": "Reset",
+            "run": "Run Simulation"
+        },
+        "input": {
+            "label": "Input Text",
+            "placeholder": "Enter your text for ReWOO processing..."
+        },
+        "config": {
+            "title": "Configuration",
+            "steps": "Reasoning Steps",
+            "model": "Model Settings",
+            "temperature": "Temperature",
+            "maxTokens": "Max Tokens",
+            "output": "Output Format"
+        },
+        "steps": {
+            "parse": "Parse Input",
+            "reason": "Apply Reasoning",
+            "validate": "Validate Results",
+            "generate": "Generate Output"
+        }
+    },
+    "reflection": {
+        "title": "Reflection Agent",
+        "actions": {
+            "clear": "Clear",
+            "reflect": "Reflect",
+            "send": "Send"
+        },
+        "input": {
+            "label": "Message",
+            "placeholder": "Type your message..."
+        },
+        "config": {
+            "title": "Configuration",
+            "triggers": "Reflection Triggers",
+            "depth": {
+                "title": "Reflection Depth",
+                "level": "Analysis Level",
+                "description": "Level {level} - Deeper analysis with higher levels"
+            },
+            "memory": {
+                "title": "Memory Settings",
+                "retention": "Memory Retention"
+            },
+            "visualization": "Visualization Type"
+        },
+        "triggers": {
+            "messageCount": "Message Count Threshold",
+            "timeInterval": "Time Interval",
+            "emotionalShift": "Emotional Shift Detection",
+            "topicChange": "Topic Change Detection"
+        },
+        "visualization": {
+            "timeline": "Timeline View",
+            "graph": "Graph View",
+            "mindmap": "Mind Map"
+        },
+        "insights": {
+            "title": "Reflection Insights",
+            "patterns": "Pattern Recognition",
+            "emotions": "Emotional Analysis",
+            "topics": "Topic Analysis"
+        },
+        "messageTypes": {
+            "user": "User",
+            "agent": "Agent",
+            "reflection": "Reflection"
+        }
+    },
+    "planExecute": {
+        "title": "Plan & Execute Agent",
+        "actions": {
+            "reset": "Reset",
+            "execute": "Execute Plan"
+        },
+        "input": {
+            "label": "Task Description",
+            "placeholder": "Describe the task you want to accomplish..."
+        },
+        "status": {
+            "title": "Current Status",
+            "step": "Current Step",
+            "phase": "Current Phase"
+        },
+        "phases": {
+            "planning": "Planning",
+            "executing": "Executing",
+            "completed": "Completed"
+        },
+        "config": {
+            "title": "Configuration",
+            "planning": {
+                "title": "Planning Settings",
+                "maxSteps": "Maximum Steps",
+                "detail": "Detail Level"
+            },
+            "execution": {
+                "title": "Execution Settings",
+                "stopOnError": "Stop on Error",
+                "validate": "Validate Results"
+            },
+            "tools": {
+                "title": "Available Tools"
+            }
+        },
+        "detailLevels": {
+            "high": "High Detail",
+            "medium": "Medium Detail",
+            "low": "Low Detail"
+        },
+        "tools": {
+            "search": "Search Tool",
+            "searchDesc": "Search and retrieve information",
+            "calculate": "Calculator Tool",
+            "calculateDesc": "Perform mathematical operations",
+            "transform": "Transform Tool",
+            "transformDesc": "Convert between different formats"
+        },
+        "result": "Result"
+    },
+    "hierarchical": {
+        "title": "Hierarchical Agent Teams",
+        "actions": {
+            "reset": "Reset",
+            "start": "Start Simulation"
+        },
+        "input": {
+            "label": "Task Description",
+            "placeholder": "Describe the task for the team to accomplish..."
+        },
+        "visualization": {
+            "title": "Team Hierarchy"
+        },
+        "log": {
+            "title": "Activity Log",
+            "result": "Result"
+        },
+        "config": {
+            "title": "Configuration",
+            "structure": {
+                "title": "Team Structure",
+                "teamSize": "Team Size",
+                "hierarchy": "Hierarchy Type"
+            },
+            "communication": {
+                "title": "Communication Settings",
+                "crossTeam": "Enable Cross-team Communication",
+                "directToManager": "Allow Direct Manager Communication"
+            },
+            "specializations": {
+                "title": "Team Specializations"
+            }
+        },
+        "sizes": {
+            "small": "Small Team (3-5 members)",
+            "medium": "Medium Team (6-10 members)",
+            "large": "Large Team (11+ members)"
+        },
+        "hierarchyTypes": {
+            "flat": "Flat Structure",
+            "pyramid": "Pyramid Structure",
+            "matrix": "Matrix Structure"
+        },
+        "roles": {
+            "manager": "Project Manager",
+            "managerDesc": "Oversees all teams and coordinates efforts",
+            "researcher": "Research Specialist",
+            "analyst": "Data Analyst",
+            "developer": "Implementation Specialist"
+        },
+        "teams": {
+            "research": "Research Team",
+            "researchDesc": "Gathers and analyzes information",
+            "implementation": "Implementation Team",
+            "implementationDesc": "Executes proposed solutions"
+        },
+        "members": {
+            "researcher": "Lead Researcher",
+            "analyst": "Senior Analyst",
+            "developer": "Senior Developer"
+        },
+        "specializations": {
+            "research": "Research Specialization",
+            "researchDesc": "Focus on information gathering and analysis",
+            "analysis": "Analysis Specialization",
+            "analysisDesc": "Focus on data processing and insights",
+            "implementation": "Implementation Specialization",
+            "implementationDesc": "Focus on executing solutions"
+        }
+    },
+    "supervisor": {
+        "title": "Agent Supervisor",
+        "actions": {
+            "reset": "Reset",
+            "start": "Start Supervision"
+        },
+        "input": {
+            "label": "Task Description",
+            "placeholder": "Describe the task to be supervised..."
+        },
+        "dashboard": {
+            "title": "Supervision Dashboard",
+            "supervisor": "Supervisor"
+        },
+        "log": {
+            "title": "Supervision Log",
+            "feedback": "Feedback",
+            "taskReceived": "New task received, initiating supervision",
+            "completed": "Task completed successfully"
+        },
+        "config": {
+            "title": "Configuration",
+            "style": {
+                "title": "Supervision Style"
+            },
+            "intervention": {
+                "title": "Intervention Settings",
+                "auto": "Enable Auto-intervention",
+                "threshold": "Intervention Threshold"
+            },
+            "agents": {
+                "title": "Agent Management"
+            },
+            "metrics": {
+                "title": "Performance Metrics"
+            }
+        },
+        "styles": {
+            "proactive": "Proactive Supervision",
+            "reactive": "Reactive Supervision",
+            "balanced": "Balanced Approach"
+        },
+        "agentTypes": {
+            "executor": "Task Executor",
+            "executorDesc": "Performs primary task operations",
+            "validator": "Result Validator",
+            "validatorDesc": "Validates task outputs",
+            "optimizer": "Performance Optimizer",
+            "optimizerDesc": "Optimizes execution efficiency"
+        },
+        "metrics": {
+            "accuracy": "Task Accuracy",
+            "efficiency": "Execution Efficiency",
+            "coordination": "Team Coordination"
+        },
+        "agents": {
+            "executor": "Executor Agent",
+            "validator": "Validator Agent",
+            "optimizer": "Optimizer Agent"
+        },
+        "phases": {
+            "idle": "Idle",
+            "planning": "Planning",
+            "executing": "Executing",
+            "completed": "Completed"
+        },
+        "messages": {
+            "waiting": "Waiting for task input",
+            "analyzing": "Analyzing task requirements",
+            "completed": "Task execution completed"
+        },
+        "status": {
+            "waiting": "Waiting for assignment",
+            "executing": "Executing task"
+        },
+        "tasks": {
+            "executing": "Executing primary task",
+            "validating": "Validating results",
+            "optimizing": "Optimizing performance"
+        }
+    },
+    "collaboration": {
+        "pageTitle": "Multi-Agent Collaboration",
+        "pageDescription": "Experience a sophisticated multi-agent collaboration system where AI agents work together to solve complex tasks through coordinated communication and task distribution.",
+        "title": "Agent Collaboration Workspace",
+        "actions": {
+            "reset": "Reset",
+            "start": "Start Simulation"
+        },
+        "input": {
+            "label": "Task Description",
+            "placeholder": "Describe the task for the agents to collaborate on..."
+        },
+        "network": {
+            "title": "Collaboration Network"
+        },
+        "communication": {
+            "title": "Communication Log",
+            "response": "Response"
+        },
+        "progress": {
+            "title": "Progress Tracking"
+        },
+        "config": {
+            "title": "Configuration",
+            "mode": {
+                "title": "Collaboration Mode"
+            },
+            "communication": {
+                "title": "Communication Settings",
+                "broadcast": "Enable Broadcast Messages",
+                "realtime": "Real-time Updates"
+            },
+            "roles": {
+                "title": "Agent Roles"
+            },
+            "distribution": {
+                "title": "Task Distribution"
+            }
+        },
+        "modes": {
+            "cooperative": "Cooperative",
+            "competitive": "Competitive",
+            "hybrid": "Hybrid"
+        },
+        "distribution": {
+            "round": "Round Robin",
+            "skill": "Skill-based",
+            "load": "Load Balanced"
+        },
+        "roles": {
+            "coordinator": "Task Coordinator",
+            "coordinatorDesc": "Manages task distribution and workflow",
+            "specialist": "Domain Specialist",
+            "specialistDesc": "Executes specialized tasks",
+            "evaluator": "Quality Evaluator",
+            "evaluatorDesc": "Validates task outcomes"
+        },
+        "agents": {
+            "coordinator": "Coordinator",
+            "specialist1": "Specialist A",
+            "specialist2": "Specialist B"
+        },
+        "status": {
+            "waiting": "Waiting for task",
+            "idle": "Idle"
+        },
+        "tasks": {
+            "assigning": "Assigning tasks",
+            "processing": "Processing task",
+            "supporting": "Providing support",
+            "completed": "Task completed"
+        },
+        "messages": {
+            "taskAssignment": "New task assignment: Please process the following request",
+            "assistance": "Offering assistance with current task",
+            "completion": "Task completed successfully"
+        },
+        "metrics": {
+            "completion": "Task Completion",
+            "completionDesc": "Overall task completion progress",
+            "efficiency": "Collaboration Efficiency",
+            "efficiencyDesc": "Team coordination effectiveness",
+            "quality": "Output Quality",
+            "qualityDesc": "Task result quality assessment"
+        }
+    },
+    "selfRag": {
+        "pageTitle": "Self-RAG Search",
+        "pageDescription": "Experience an advanced self-critiquing and refining RAG system that continuously improves search results through iterative refinement and validation.",
+        "query": {
+            "title": "Search Query",
+            "label": "Enter your query",
+            "placeholder": "What would you like to search for?"
+        },
+        "actions": {
+            "reset": "Reset",
+            "search": "Search"
+        },
+        "timeline": {
+            "title": "Search Process"
+        },
+        "documents": {
+            "title": "Retrieved Documents"
+        },
+        "answer": {
+            "title": "Generated Answer",
+            "generated": "Generated Answer",
+            "citations": "Citations",
+            "critique": "Self-Critique"
+        },
+        "config": {
+            "title": "Search Configuration",
+            "status": {
+                "title": "Process Status",
+                "refinements": "Refinement Cycle {count}"
+            },
+            "evolution": {
+                "title": "Query Evolution",
+                "original": "Original Query",
+                "refined": "Refined Query"
+            }
+        },
+        "confidence": {
+            "high": "High Confidence",
+            "medium": "Medium Confidence",
+            "low": "Low Confidence"
+        },
+        "steps": {
+            "retrieval": "Initial Retrieval",
+            "retrievalDesc": "Retrieving relevant documents from the knowledge base",
+            "generation": "Answer Generation",
+            "generationDesc": "Generating initial answer based on retrieved documents",
+            "critique": "Self-Critique",
+            "critiqueDesc": "Analyzing answer quality and identifying potential improvements",
+            "refinement": "Query Refinement",
+            "refinementDesc": "Refining the search query based on critique",
+            "refinementDetails": "Refinement cycle {count}"
+        },
+        "status": {
+            "idle": "Ready to Search",
+            "retrieving": "Retrieving Documents",
+            "generating": "Generating Answer",
+            "critiquing": "Self-Critiquing",
+            "refining": "Refining Query",
+            "complete": "Search Complete",
+            "error": "Error Occurred"
+        }
+    },
+    "crag": {
+        "pageTitle": "Contextual RAG Search",
+        "pageDescription": "Experience an advanced contextual retrieval-augmented generation system that incorporates user context, system preferences, and historical interactions for more relevant and personalized search results.",
+        "query": {
+            "title": "Search Query",
+            "label": "Enter your query",
+            "placeholder": "What would you like to search for?"
+        },
+        "actions": {
+            "reset": "Reset",
+            "search": "Search"
+        },
+        "context": {
+            "title": "Active Contexts",
+            "types": {
+                "user": "User Context",
+                "system": "System Context",
+                "historical": "Historical Context"
+            }
+        },
+        "expanded": {
+            "title": "Query Enhancement",
+            "original": "Original Query",
+            "enhanced": "Enhanced Query"
+        },
+        "documents": {
+            "title": "Retrieved Documents"
+        },
+        "answer": {
+            "title": "Generated Answer",
+            "generated": "Contextual Answer",
+            "usedContexts": "Applied Contexts",
+            "usedDocuments": "Referenced Documents",
+            "explanation": "Answer Explanation"
+        },
+        "status": {
+            "title": "Process Status",
+            "idle": "Ready to Search",
+            "expanding": "Enhancing Query",
+            "retrieving": "Retrieving Documents",
+            "analyzing": "Analyzing Context",
+            "generating": "Generating Answer",
+            "complete": "Search Complete",
+            "error": "Error Occurred"
+        },
+        "steps": {
+            "expanding": "Query Enhancement",
+            "expandingDesc": "Enriching query with contextual information",
+            "retrieving": "Document Retrieval",
+            "retrievingDesc": "Finding relevant documents",
+            "analyzing": "Context Analysis",
+            "analyzingDesc": "Analyzing contextual relevance",
+            "generating": "Answer Generation",
+            "generatingDesc": "Creating contextualized response",
+            "inProgress": "In Progress",
+            "completed": "Completed",
+            "pending": "Pending"
+        },
+        "confidence": {
+            "high": "High Confidence",
+            "medium": "Medium Confidence",
+            "low": "Low Confidence"
+        }
+    },
+    "agenticRag": {
+        "pageTitle": "Agentic RAG Search",
+        "pageDescription": "Experience an advanced retrieval-augmented generation system with agent-based document critique and answer refinement for more accurate and reliable search results.",
+        "query": {
+            "title": "Search Query",
+            "label": "Enter your query",
+            "placeholder": "What would you like to search for?"
+        },
+        "actions": {
+            "reset": "Reset",
+            "search": "Search"
+        },
+        "documents": {
+            "title": "Retrieved Documents",
+            "critique": "Agent Critique"
+        },
+        "critiques": {
+            "title": "Document Critiques",
+            "observation": "Quality Assessment",
+            "suggestion": "Improvement Suggestion"
+        },
+        "answer": {
+            "title": "Generated Answer",
+            "generated": "Agent Response",
+            "citations": "Source Documents",
+            "reasoning": "Reasoning Process",
+            "improvements": "Suggested Improvements"
+        },
+        "status": {
+            "title": "Process Status",
+            "idle": "Ready to Search",
+            "retrieving": "Retrieving Documents",
+            "critiquing": "Critiquing Documents",
+            "generating": "Generating Answer",
+            "complete": "Search Complete",
+            "error": "Error Occurred"
+        },
+        "steps": {
+            "retrieving": "Document Retrieval",
+            "retrievingDesc": "Finding relevant documents",
+            "critiquing": "Document Critique",
+            "critiquingDesc": "Analyzing document quality and relevance",
+            "generating": "Answer Generation",
+            "generatingDesc": "Creating refined response",
+            "inProgress": "In Progress",
+            "completed": "Completed",
+            "pending": "Pending"
+        },
+        "confidence": {
+            "high": "High Confidence",
+            "medium": "Medium Confidence",
+            "low": "Low Confidence"
+        }
+    },
+    "customerSupport": {
+        "pageTitle": "Customer Support Chat",
+        "pageDescription": "Experience our intelligent customer support system that provides personalized assistance through a combination of specialized agents working together to solve your issues.",
+        "title": "Support Chat",
+        "input": {
+            "label": "Your message",
+            "placeholder": "Type your message here..."
+        },
+        "actions": {
+            "send": "Send",
+            "reset": "New Chat",
+            "suggested": "Suggested Actions"
+        },
+        "messages": {
+            "greeting": "Hello! How can I assist you today?",
+            "requiredInfo": "Required Information",
+            "nextSteps": "Next Steps"
+        },
+        "roles": {
+            "user": "You",
+            "assistant": "Support Agent",
+            "system": "System",
+            "function": "Process"
+        },
+        "messageTypes": {
+            "greeting": "Greeting",
+            "clarification": "Clarification",
+            "solution": "Solution",
+            "followup": "Follow-up",
+            "error": "Error"
+        },
+        "status": {
+            "title": "Chat Status",
+            "idle": "Ready to Help",
+            "thinking": "Thinking",
+            "routing": "Routing Issue",
+            "clarifying": "Getting More Info",
+            "solving": "Finding Solution",
+            "complete": "Response Ready",
+            "error": "Error Occurred"
+        },
+        "category": {
+            "title": "Issue Category",
+            "types": {
+                "technical_support": "Technical Support",
+                "account_issues": "Account Issues",
+                "billing": "Billing",
+                "product_info": "Product Information",
+                "general": "General Inquiry"
+            }
+        },
+        "requiredInfo": {
+            "title": "Required Information"
+        }
+    },
+    "landing": {
+        "title": "AI Agent Examples with LangGraph.js",
+        "description": "Explore various implementations of AI agents using LangGraph.js, demonstrating different patterns and architectures for building intelligent systems.",
+        "examples": {
+            "customerSupport": "An intelligent customer support system with specialized agents for routing, clarification, and solution generation.",
+            "agenticRag": "Advanced retrieval-augmented generation with agent-based document critique and answer refinement.",
+            "selfRag": "Self-improving RAG system that critiques and refines its own search and answer generation process.",
+            "crag": "Contextual RAG system that incorporates user context and preferences for more relevant results.",
+            "collaboration": "Multi-agent system demonstrating collaboration between specialized agents to solve complex tasks.",
+            "supervisor": "Hierarchical agent system with a supervisor agent overseeing and coordinating other agents.",
+            "hierarchical": "Complex agent teams organized in a hierarchical structure for handling multi-step tasks.",
+            "plan-execute": "Agent system that plans tasks and executes them step by step with monitoring and adjustment.",
+            "reflection": "Self-reflective agent that analyzes its own performance and improves decision-making.",
+            "rewoo": "ReWOO (Reflection with Observation) agent that combines observation and reflection for better outcomes.",
+            "chat-simulation": "Interactive chat simulation demonstrating natural language understanding and generation."
+        }
     }
 }

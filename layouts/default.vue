@@ -16,10 +16,6 @@
 
           <div class="">
             <Button icon="pi pi-bars" severity="secondary" aria-label="Menu" text @click="menuMain = !menuMain" class="mr-2" />
-            <!-- <div class="flex align-items-center gap-2">
-                <LanguageSwitcher />
-                <Button :icon="isDark ? 'pi pi-sun' : 'pi pi-moon'" severity="secondary" aria-label="Toggle theme" text @click="toggleTheme" />
-            </div> -->
           </div>
         </div>
       </div>

@@ -16,10 +16,10 @@
 
           <div class="">
             <Button icon="pi pi-bars" severity="secondary" aria-label="Menu" text @click="menuMain = !menuMain" class="mr-2" />
-            <div class="flex align-items-center gap-2">
+            <!-- <div class="flex align-items-center gap-2">
                 <LanguageSwitcher />
                 <Button :icon="isDark ? 'pi pi-sun' : 'pi pi-moon'" severity="secondary" aria-label="Toggle theme" text @click="toggleTheme" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -40,10 +40,11 @@
         </div>
       </div>
     </template>
+
     <template #end>
       <div class="flex align-items-center gap-2">
         <LanguageSwitcher />
-        <Button icon="pi pi-sun" text rounded severity="secondary" v-tooltip.bottom="'Toggle theme'" @click="toggleTheme" />
+        <Button :icon="isDark ? 'pi pi-sun' : 'pi pi-moon'" severity="secondary" aria-label="Toggle theme" text @click="toggleTheme" />
         <Button icon="pi pi-bars" text rounded severity="secondary" @click="menuMainMobile = true" class="md:hidden" />
         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" @click="toggleMenuProfile" aria-haspopup="true" aria-controls="overlay_menu" />
         <Menu ref="menuProfile" id="overlay_menu" :model="menuProfileItems" :popup="true">

@@ -8,6 +8,11 @@
             :placeholder="currentLocaleName"
             class="w-full md:w-14rem"
             @change="switchLanguage"
+            id="language-selector"
+            :pt="{
+                root: { id: 'language-selector' },
+                panel: { id: 'language-selector-panel' }
+            }"
         />
     </div>
 </template>
@@ -40,13 +45,9 @@ const switchLanguage = async (event) => {
     const route = router.currentRoute.value;
     
     // Navigate to the same route with new locale
-    await router.replace({
-        ...route,
-        name: route.name,
-        params: {
-            ...route.params,
-            locale: localeCode
-        }
+    await router.push({
+        path: route.path,
+        query: route.query
     });
 };
 </script>

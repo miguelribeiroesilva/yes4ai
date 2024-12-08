@@ -76,6 +76,42 @@ const menuItems = computed(() => [
     label: t('menu.aiExamples'),
     children: [
       {
+        key: 'LangChain',
+        label: 'LangChain',
+        children: [
+          {
+            key: 'chains',
+            label: 'Chains',
+            to: '/langchain/chains'
+          },
+          {
+            key: 'agents',
+            label: 'Agents',
+            to: '/langchain/agents'
+          },
+          {
+            key: 'memory',
+            label: 'Memory',
+            to: '/langchain/memory'
+          },
+          {
+            key: 'retrieval',
+            label: 'Retrieval',
+            to: '/langchain/retrieval'
+          },
+          {
+            key: 'prompts',
+            label: 'Prompts',
+            to: '/langchain/prompts'
+          },
+          {
+            key: 'output-parsers',
+            label: 'Output Parsers',
+            to: '/langchain/output-parsers'
+          }
+        ]
+      },
+      {
         key: 'LangGraph',
         label: 'LangGraph',
         children: [
@@ -161,7 +197,8 @@ const menuItems = computed(() => [
             to: '/autogen/task-solving'
           }
         ]
-      }
+      },
+
     ]
   },
 

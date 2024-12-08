@@ -726,5 +726,76 @@
             "title": "Task Solving",
             "description": "AI agents working together to solve complex tasks"
         }
+    },
+    "langchain": {
+        "processing": "Processing...",
+        "run": "Run",
+        "options": "Options",
+        "chains": {
+            "title": "Chains",
+            "description": "Combine multiple components for specific tasks",
+            "types": {
+                "llm": "LLM Chain",
+                "sequential": "Sequential Chain",
+                "router": "Router Chain",
+                "transformation": "Transformation Chain",
+                "retrieval": "Retrieval Chain"
+            }
+        },
+        "agents": {
+            "title": "Agents",
+            "description": "Autonomous agents that use tools to complete tasks",
+            "types": {
+                "zero-shot": "Zero-shot Agent",
+                "react": "ReAct Agent",
+                "structured": "Structured Agent",
+                "openai": "OpenAI Functions Agent",
+                "plan-and-execute": "Plan and Execute Agent"
+            }
+        },
+        "memory": {
+            "title": "Memory",
+            "description": "Different types of memory for conversation history",
+            "types": {
+                "buffer": "Buffer Memory",
+                "summary": "Summary Memory",
+                "conversation": "Conversation Memory",
+                "vector": "Vector Memory",
+                "entity": "Entity Memory"
+            }
+        },
+        "retrieval": {
+            "title": "Retrieval",
+            "description": "Retrieve and use relevant information",
+            "types": {
+                "similarity": "Similarity Search",
+                "mmr": "MMR Search",
+                "hybrid": "Hybrid Search",
+                "contextual": "Contextual Compression",
+                "time-weighted": "Time-weighted Search"
+            }
+        },
+        "prompts": {
+            "title": "Prompts",
+            "description": "Create and manage prompt templates",
+            "types": {
+                "basic": "Basic Template",
+                "few-shot": "Few-shot Template",
+                "structured": "Structured Template",
+                "chat": "Chat Template",
+                "pipeline": "Pipeline Template"
+            }
+        },
+        "output-parsers": {
+            "title": "Output Parsers",
+            "description": "Parse and structure LLM outputs",
+            "types": {
+                "structured": "Structured Parser",
+                "list": "List Parser",
+                "datetime": "DateTime Parser",
+                "regex": "Regex Parser",
+                "custom": "Custom Parser"
+            }
+        }
     }
 }

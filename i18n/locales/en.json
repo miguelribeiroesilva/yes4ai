@@ -704,5 +704,27 @@
             "rewoo": "ReWOO (Reflection with Observation) agent that combines observation and reflection for better outcomes.",
             "chat-simulation": "Interactive chat simulation demonstrating natural language understanding and generation."
         }
+    },
+    "autogen": {
+        "processing": "Processing...",
+        "inputPlaceholder": "Type your message...",
+        "send": "Send",
+        "agentList": "Active Agents",
+        "basic": {
+            "title": "Basic Chat",
+            "description": "Simple one-on-one conversation with an AI agent"
+        },
+        "multi": {
+            "title": "Multi-Agent Chat",
+            "description": "Conversation between multiple specialized AI agents"
+        },
+        "group": {
+            "title": "Group Chat",
+            "description": "Group discussion with multiple AI agents collaborating"
+        },
+        "task": {
+            "title": "Task Solving",
+            "description": "AI agents working together to solve complex tasks"
+        }
     }
 }

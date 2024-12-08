@@ -53,7 +53,7 @@
   <Sidebar v-model:visible="menuMain" :modal="false" :dismissable="false" :baseZIndex="100">
     <template #container="{ closeCallback }">
       <div class="flex flex-column h-full">
-        <mainMenu />
+        <mainMenu v-model="menuMain" />
       </div>
     </template>
   </Sidebar>
@@ -69,11 +69,11 @@
             </svg>
             <span class="font-semibold text-2xl text-primary">Your Logo</span>
           </span>
-          <span>
-            <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined class="h-2rem w-2rem"></Button>
-          </span>
+          <Button icon="pi pi-times" rounded text severity="secondary" @click="closeCallback" />
         </div>
-        <mainMenu />
+        <div class="flex-grow-1">
+          <mainMenu v-model="menuMainMobile" />
+        </div>
       </div>
     </template>
   </Sidebar>
@@ -84,45 +84,40 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, watch } from "vue";
+import { useRoute } from '#app';
 
+const route = useRoute();
 const menuProfile = ref();
 const menuMain = ref(false);
 const menuMainMobile = ref(false);
+
+// Watch for route changes to close the sidebar
+watch(() => route.path, () => {
+  menuMainMobile.value = false;
+}, { deep: true });
+
+onMounted(() => {
+  menuMain.value = false;
+});
 
 const menuProfileItems = ref([
   {
     label: "Perfil",
     items: [
       {
-        label: "Configuraciones",
+        label: "Settings",
         icon: "pi pi-cog",
         route: "/settings",
       },
       {
-        label: "Salir",
+        label: "Logout",
         icon: "pi pi-sign-out",
         route: "/logout",
       },
     ],
   },
 ]);
-
-onMounted(() => {
-  if (window.innerWidth < 768) {
-    menuMain.value = false;
-  } else {
-    menuMain.value = true;
-  }
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 768) {
-      menuMain.value = false;
-    } else {
-      menuMain.value = true;
-    }
-  });
-});
 
 const toggleMenuProfile = (event) => {
   menuProfile.value.toggle(event);

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "langchain": "^0.3.6",
     "@anthropic-ai/sdk": "^0.32.1",
     "@langchain/openai": "^0.0.12",
     "@nuxtjs/i18n": "9.0.0-rc.2",

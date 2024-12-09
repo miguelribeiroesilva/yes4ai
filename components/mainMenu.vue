@@ -83,6 +83,16 @@ const menuItems = computed(() => [
             key: 'llm-chain',
             label: 'LLM Chain',
             to: '/langchain/llm-chain'
+          },
+          {
+            key: 'qa-chat',
+            label: 'QA Chat',
+            to: '/langchain/qa-chat'
+          },
+          {
+            key: 'rag',
+            label: 'RAG',
+            to: '/langchain/rag'
           }
         ]
       },

@@ -80,34 +80,9 @@ const menuItems = computed(() => [
         label: 'LangChain',
         children: [
           {
-            key: 'chains',
-            label: 'Chains',
-            to: '/langchain/chains'
-          },
-          {
-            key: 'agents',
-            label: 'Agents',
-            to: '/langchain/agents'
-          },
-          {
-            key: 'memory',
-            label: 'Memory',
-            to: '/langchain/memory'
-          },
-          {
-            key: 'retrieval',
-            label: 'Retrieval',
-            to: '/langchain/retrieval'
-          },
-          {
-            key: 'prompts',
-            label: 'Prompts',
-            to: '/langchain/prompts'
-          },
-          {
-            key: 'output-parsers',
-            label: 'Output Parsers',
-            to: '/langchain/output-parsers'
+            key: 'llm-chain',
+            label: 'LLM Chain',
+            to: '/langchain/llm-chain'
           }
         ]
       },

@@ -90,6 +90,11 @@ const menuItems = computed(() => [
             to: '/langchain/qa-chat'
           },
           {
+            key: 'query-analysis',
+            label: 'Query Analysis',
+            to: '/langchain/query-analysis'
+          },
+          {
             key: 'rag',
             label: 'RAG',
             to: '/langchain/rag'

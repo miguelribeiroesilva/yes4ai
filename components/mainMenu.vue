@@ -125,11 +125,7 @@ const menuItems = computed(() => [
             label: 'Calendar Tool',
             to: '/langchain/calendar'
           },
-          {
-            key: 'test',
-            label: t('menu.langchain.test'),
-            to: '/langchain/test'
-          }
+
         ]
       },
       {
@@ -148,6 +144,11 @@ const menuItems = computed(() => [
             to: '/langgraph/agentic-rag'
           },
           {
+            key: 'collaboration',
+            label: 'Agent Collaboration',
+            to: '/langgraph/collaboration'
+          },
+          {
             key: 'self-rag',
             label: t('menu.selfRag'),
             to: '/langgraph/self-rag'
@@ -158,19 +159,14 @@ const menuItems = computed(() => [
             to: '/langgraph/crag'
           },
           {
-            key: 'collaboration',
-            label: t('menu.collaboration'),
-            to: '/langgraph/agent-collaboration'
-          },
-          {
             key: 'supervisor',
             label: t('menu.supervisor'),
-            to: '/langgraph/agent-supervisor'
+            to: '/langgraph/supervisor'
           },
           {
             key: 'hierarchical',
             label: t('menu.hierarchical'),
-            to: '/langgraph/hierarchical-teams'
+            to: '/langgraph/hierarchical'
           },
           {
             key: 'plan-execute',

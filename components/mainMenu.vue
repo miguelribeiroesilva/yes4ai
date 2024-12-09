@@ -124,6 +124,11 @@ const menuItems = computed(() => [
             key: 'calendar',
             label: 'Calendar Tool',
             to: '/langchain/calendar'
+          },
+          {
+            key: 'test',
+            label: t('menu.langchain.test'),
+            to: '/langchain/test'
           }
         ]
       },

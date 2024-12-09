@@ -1,4 +1,6 @@
 import { ref } from 'vue';
+import { useLangChainConfig } from './useLangChainConfig';
+import { BaseMessage } from '@langchain/core/messages';
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
@@ -66,16 +68,42 @@ export function useLangChain() {
     try {
       addMessage('user', input, { type: 'chain', chainType });
 
-      // TODO: Implement actual LangChain chain processing
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { createChain } = useLangChainConfig();
+      let chain;
 
-      addMessage('assistant', `Processed with ${chainType} chain. This is a simulated response.`, {
-        type: 'chain',
-        chainType
-      });
-    } catch (error) {
+      try {
+        switch (chainType) {
+          case 'llm':
+            chain = createChain('You are a helpful assistant. Human: {input} Assistant:');
+            break;
+          case 'sequential':
+            chain = createChain('Break down this task into sequential steps: {input}');
+            break;
+          case 'router':
+            chain = createChain('Route this request to the appropriate department: {input}');
+            break;
+          case 'transformation':
+            chain = createChain('Transform this input into a structured format: {input}');
+            break;
+          case 'retrieval':
+            chain = createChain('Search and retrieve relevant information for: {input}');
+            break;
+          default:
+            chain = createChain('{input}');
+        }
+
+        const response = await chain.invoke({ input });
+        addMessage('assistant', response, {
+          type: 'chain',
+          chainType
+        });
+      } catch (chainError: any) {
+        console.error('Chain creation/invocation error:', chainError);
+        throw new Error(`Chain error: ${chainError.message}`);
+      }
+    } catch (error: any) {
       console.error('Error processing chain:', error);
-      addMessage('system', 'Error in chain processing. Please try again.');
+      addMessage('system', `Error in chain processing: ${error.message}`);
     } finally {
       isProcessing.value = false;
     }
@@ -87,16 +115,20 @@ export function useLangChain() {
     try {
       addMessage('user', input, { type: 'agent', agentType });
 
-      // TODO: Implement actual LangChain agent execution
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      addMessage('assistant', `Agent ${agentType} executed the task. This is a simulated response.`, {
-        type: 'agent',
-        agentType
-      });
-    } catch (error) {
+      const { model } = useLangChainConfig();
+      try {
+        const response = await model.invoke(input);
+        addMessage('assistant', response.content, {
+          type: 'agent',
+          agentType
+        });
+      } catch (modelError: any) {
+        console.error('Model invocation error:', modelError);
+        throw new Error(`Model error: ${modelError.message}`);
+      }
+    } catch (error: any) {
       console.error('Error running agent:', error);
-      addMessage('system', 'Error in agent execution. Please try again.');
+      addMessage('system', `Error in agent execution: ${error.message}`);
     } finally {
       isProcessing.value = false;
     }

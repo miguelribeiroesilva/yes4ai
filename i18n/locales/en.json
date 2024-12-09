@@ -729,6 +729,8 @@
         }
     },
     "langchain": {
+        "title": "LangChain Tools",
+        "test": "LangChain Test",
         "processing": "Processing...",
         "run": "Run",
         "options": "Options",

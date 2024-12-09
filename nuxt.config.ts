@@ -5,6 +5,20 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
 
+  nitro: {
+    routeRules: {
+      '/api/**': { cors: true }
+    }
+  },
+
+  runtimeConfig: {
+    openaiApiKey: process.env.OPENAI_API_KEY || '',
+    anthropicApiKey: process.env.ANTHROPIC_API_KEY || '',
+    public: {
+      // Public keys that are exposed to the client
+    }
+  },
+
   primevue: {
     options: {
       ripple: true,
